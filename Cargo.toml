@@ -17,6 +17,7 @@ members = [
     "bindings/resvg-skia",
     "capi",
     "tools/rendersvg",
+    "tools/rendersvgsrv",
     "tools/usvg",
     "usvg",
 ]
@@ -30,6 +31,7 @@ rgb = "0.8"
 usvg = { path = "usvg", version = "0.8", default-features = false }
 png = { version = "0.15", default-features = false }
 jpeg-decoder = { version = "0.1.15", default-features = false }
+
 
 # cairo backend
 cairo-rs = { version = "0.7.1", default-features = false, features = ["png"], optional = true }

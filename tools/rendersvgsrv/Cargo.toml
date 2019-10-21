@@ -1,0 +1,25 @@
+[package]
+name = "rendersvgsrv"
+version = "0.8.0"
+authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
+keywords = ["svg", "render", "raster"]
+license = "MPL-2.0"
+edition = "2018"
+workspace = "../../"
+
+[dependencies]
+fern = "0.5"
+log = "0.4"
+pico-args = "0.2"
+resvg = { path = "../../", default-features = false }
+time = "0.1"
+simple-server = "0.4"
+image = "0.10.4"
+
+[features]
+default = ["text"]
+cairo-backend = ["resvg/cairo-backend"]
+qt-backend = ["resvg/qt-backend"]
+raqote-backend = ["resvg/raqote-backend"]
+skia-backend = ["resvg/skia-backend"]
+text = ["resvg/text"]
